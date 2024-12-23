@@ -23,6 +23,7 @@
                         const imgElement = document.createElement('img');
                         imgElement.src = imageData.url;
                         imgElement.alt = imageData.name || 'Event Image';
+                        imgElement.style.width = '200px'; 
                         imgElement.classList.add('event-image');
 
                         const textElement = document.createElement('p');
@@ -41,5 +42,5 @@
                 console.error('Failed to load images from database:', error);
             });
 
-            loadImagesButton.style.display = 'none'; // Hide the button after loading images
+            // loadImagesButton.style.display = 'none'; // Hide the button after loading images
         }

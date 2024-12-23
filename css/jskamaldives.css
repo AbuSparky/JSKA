@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+  
+  .imgsoc {
+    height: 300px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .socialmedia ul {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+    font-size: 30px;
+  }
+  
+  .socialmedia ul li a {
+    text-decoration: none;
+    color: rgb(2, 4, 4);
+  }
+  
+  .imgsoc img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+  }
+  
+  .contact h3 {
+    font-size: 20px;
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 27px;
+  }
+  
+  .dropdown-menu a {
+    font-size: 22px;
+  }
+  .contact{
+    display: none;
+  }
+        
+        .profileimg img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        footer {
+            background-color: black;
+            color: white;
+        }
+        
+        .mail li a {
+            text-decoration: none;
+            color: white;
+        }

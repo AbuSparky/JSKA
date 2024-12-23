@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Upload to Firebase</title>
+</head>
+
+<body>
+  <h1>Upload Image to Firebase</h1>
+  <input type="file" id="imageInput" accept="image/*">
+  <input type="text" id="textInput" placeholder="Enter text for image"/>
+  <button id="uploadButton">Events Upload</button>
+  <button id="achievementUploadButton">Achievements Upload</button>
+  <button id="memberUploadButton">Member Upload</button>
+  <button id="blackbeltUploadButton">blackbelts Upload</button>
+  
+  <h2>Events Uploaded Images:</h2>
+  <div id="eventsImageContainer"></div>
+  
+  <h2>Achievements Images:</h2>
+  <div id="achievementsImageContainer"></div>
+
+  <h2>Members Images:</h2>
+  <div id="membersImageContainer"></div>
+
+  <h2>black belt Images:</h2>
+  <div id="blackbeltsImageContainer"></div>
+
+  <script type="module" src="./js/admin.js"></script>
+
+</body>
+</html>

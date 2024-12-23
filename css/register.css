@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+body{
+    /* background: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%); */
+    /* background: url("./assets/nec_home.jpg"); */
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+}
+
+.master{
+    position:absolute;
+    left:35vw;
+    top:30vh;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width:25rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: .3rem;
+}
+
+.masterTitle{
+    color: green;
+    text-align: center;
+}
+
+.loginDiv{
+    /* background-color: green; */
+    margin: 1rem;
+    position: relative;
+}
+.inputDiv{
+    position: relative;
+    margin: 1rem 0;
+    
+}
+.inputDiv input{
+    font-size: 1.2rem;
+    padding: .5rem;
+    outline: none;
+    border: 2px solid green;
+    width:100%;
+    border-radius: .3rem;
+}
+
+.inputDiv label{
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    position: absolute;
+    top: .4rem;
+    left: 1rem;
+    transition-duration: 300ms;
+    background-color: white;
+}
+
+.inputDiv input:valid + label,.inputDiv input:focus + label{
+    top: -11px;
+    font-size: 1rem;
+}
+
+.loginButn{
+    font-size: 1.2rem;
+    color: white;
+    border-radius: .3rem;
+    padding: .3rem 1.5rem;
+    border: 2px solid white;
+    outline: none;
+    background-color: rgb(0, 158, 0);
+}
+
+.loginButn:active{
+    border: 2px solid green;
+}
+

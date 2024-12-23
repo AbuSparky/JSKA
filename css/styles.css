@@ -49,33 +49,11 @@
   }
 
 /* Image Container Styles */
-#imageContainer {
-    display: flex;
-    /* flex-wrap: wrap; */
-    justify-content: space-between;
-    gap: 20px; /* Space between images */
-    padding: 20px;
-}
-
 .image-wrapper {
     width: calc(33.33% - 20px); /* 3 images per row */
     margin: 15px 0; /* Top and bottom margin for images */
     text-align: center;
 }
-
-.event-image {
-    width: 100%; /* Full width within the wrapper */
-    height: auto; 
-    border: 2px solid black;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.event-image:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
-}
-
 .image-description {
     font-size: 18px;
     color: #333;
@@ -89,21 +67,6 @@ button {
     font-size: 16px;
     margin: 20px;
     cursor: pointer;
-}
-/* Button Styles */
-#loadImagesButton {
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#loadImagesButton:hover {
-    background-color: #0056b3;
 }
 
 /* Image Container Styles */
@@ -128,21 +91,84 @@ button {
     transform: scale(1.05);
 }
 
-footer{
-    width: 100%;
-    height: 100px;
-    background-color: black;
-    color: white;
+footer {
+  width: 100%;
+  height: auto;
+  background-color: black;
+  color: white;
+  display: flex; /* Enable flexbox for the footer */
+  flex-direction: column; /* Stack items vertically for smaller screens */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  padding: 20px;
+  box-sizing: border-box;
 }
-.mail{
-    margin:20px ;
-    display: flex;
+
+.mail {
+  display: flex; /* Enable flexbox for the list */
+  flex-wrap: wrap; /* Allow items to wrap for responsiveness */
+  justify-content: center; /* Center items horizontally */
+  gap: 10px; /* Add space between items */
+  padding: 0;
+  margin: 0;
 }
-.mail > li > a {
-    text-decoration: none;
-    margin: 30px;
-}
+
 .mail > li {
-    list-style-type: none;
-    margin: auto;
+  list-style-type: none;
+}
+
+.mail > li > a {
+  text-decoration: none;
+  color: white;
+  display: inline-flex;
+  padding: 5px 10px; /* Add padding for better clickability */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+
+@media (max-width: 420px) {
+  /* Image Container Styles */
+  #imageContainer {
+    display: block;
+    flex-wrap: nowrap; /* Allows wrapping for responsiveness */
+    flex: 1 1 auto;
+    max-width: 90%; /* Ensure the container doesn't overflow */
+    margin: auto; /* Center the container */
+    background-color: #fff; /* Optional container background */
+    border: 3px solid #ddd; /* Optional border */
+    border-radius: 8px; /* Optional rounded corners */
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    word-wrap: break-word; /* Break words if they are too long */
+    word-break: break-word; /* Ensure long words break properly */
+    line-height: 1; /* Add spacing between lines for readability */
+  }
+
+  .event-image {
+    height: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 0px 50px 10px 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .image-description {
+    
+    margin: 10px auto; /* Center the description horizontally */
+    text-align: center; /* Align the text to the center */
+    white-space: nowrap; /* Prevent text wrapping */
+    font-size: 16px; /* Adjust font size if needed */
+    color: #333; /* Optional text color */
+    display: block; /* Ensure it behaves as a block element */
+    max-width: 80%; /* Optional: Limit the width for better layout */
+
+  }
+  footer {
+    flex-direction: row; /* Arrange items horizontally on larger screens */
+    justify-content: space-between; /* Distribute space evenly */
+  }
+
+  .mail {
+    justify-content: flex-start; /* Align items to the start */
+  }
 }

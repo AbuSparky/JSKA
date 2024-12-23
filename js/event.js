@@ -41,5 +41,5 @@ function displayImages() {
         console.error('Failed to load images from database:', error);
     });
 
-    loadImagesButton.style.display = 'none'; // Hide the button after loading images
+    // loadImagesButton.style.display = 'none'; // Hide the button after loading images
 }

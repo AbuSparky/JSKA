@@ -91,40 +91,6 @@ button {
     transform: scale(1.05);
 }
 
-footer {
-  width: 100%;
-  height: auto;
-  background-color: black;
-  color: white;
-  display: flex; /* Enable flexbox for the footer */
-  flex-direction: column; /* Stack items vertically for smaller screens */
-  align-items: center; /* Center items horizontally */
-  justify-content: center; /* Center items vertically */
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.mail {
-  display: flex; /* Enable flexbox for the list */
-  flex-wrap: wrap; /* Allow items to wrap for responsiveness */
-  justify-content: center; /* Center items horizontally */
-  gap: 10px; /* Add space between items */
-  padding: 0;
-  margin: 0;
-}
-
-.mail > li {
-  list-style-type: none;
-}
-
-.mail > li > a {
-  text-decoration: none;
-  color: white;
-  display: inline-flex;
-  padding: 5px 10px; /* Add padding for better clickability */
-  transition: color 0.3s ease; /* Smooth color transition */
-}
-
 
 @media (max-width: 420px) {
   /* Image Container Styles */
@@ -163,12 +129,5 @@ footer {
     max-width: 80%; /* Optional: Limit the width for better layout */
 
   }
-  footer {
-    flex-direction: row; /* Arrange items horizontally on larger screens */
-    justify-content: space-between; /* Distribute space evenly */
-  }
-
-  .mail {
-    justify-content: flex-start; /* Align items to the start */
-  }
+  
 }

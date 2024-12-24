@@ -43,10 +43,7 @@
   .dropdown-menu a {
     font-size: 22px;
   }
-  .contact{
-    display: none;
-  }
-        
+   
         .profileimg img {
             width: 100%;
             height: auto;
@@ -62,3 +59,10 @@
             text-decoration: none;
             color: white;
         }
+
+
+@media (max-width:420px){
+  .contact{
+    display: none;
+  }
+}

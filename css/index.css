@@ -63,18 +63,29 @@ body {
   font-size: 16px;
 }
 
-.poster img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
+/* Flexbox Layout for the row */
+#flexContainer {
+  display: flex; /* Enable Flexbox */
+  /* background-color: aqua; */
+  
 }
 
-footer {
-  background-color: black;
-  color: white;
+#flexContainer .col-md-6 {
+  flex: 1 1 ; /* Flex items will take up 45% of the available width */
+  margin: 10px; /* Add some space between items */
+  /* background-color: beige; */
 }
 
-.mail li a {
-  text-decoration: none;
-  color: white;
+
+.text {
+  font-size: 16px; /* Adjust text size */
+  line-height: 1.6; /* Improve line spacing */
 }
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  #flexContainer .col-md-6 {
+      flex: 1 1 100%; /* On smaller screens, each item takes full width */
+  }
+}
+

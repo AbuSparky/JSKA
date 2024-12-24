@@ -27,10 +27,13 @@ const achievementUploadButton = document.getElementById(
 const memberUploadbutton = document.getElementById("memberUploadButton");
 const blackbeltUploadbutton = document.getElementById("blackbeltUploadButton");
 const posterUploadbutton = document.getElementById("posterUploadButton");
+const slideUploadbutton = document.getElementById("slideUploadButton");
 
 const fileInput = document.getElementById("imageInput");
 const textInput = document.getElementById("textInput");
-const eventsImageContainer = document.getElementById("eventsImageContainer");
+const eventsImageContainer = document.getElementById(
+  "eventsImageContainer"
+);
 const achievementsImageContainer = document.getElementById(
   "achievementsImageContainer"
 );
@@ -42,6 +45,9 @@ const blackbeltsImageContainer = document.getElementById(
 );
 const posterImageContainer = document.getElementById(
   "posterImageContainer"
+);
+const slideImageContainer = document.getElementById(
+  "slideImageContainer"
 );
 
 // Generic Upload Image Function
@@ -167,6 +173,9 @@ blackbeltUploadbutton.addEventListener("click",()=>{
 posterUploadbutton.addEventListener("click",()=>{
   uploadImage("indexpostersfolder",posterImageContainer)
 })
+slideUploadbutton.addEventListener("click",()=>{
+  uploadImage("slidepostersfolder",slideImageContainer)
+})
 
 // Call displayImages on page load
 displayImages("eventsfolder", eventsImageContainer);
@@ -174,3 +183,4 @@ displayImages("achievementfolder", achievementsImageContainer);
 displayImages("membersfolder", membersImageContainer);
 displayImages("blackbeltsfolder", blackbeltsImageContainer);
 displayImages("indexpostersfolder",posterImageContainer);
+displayImages("slidepostersfolder",slideImageContainer);

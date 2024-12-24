@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,40 +19,29 @@
         }
 
         img {
-            width: 100px; 
+            width: 100px;
             height: 450px;
-            /* filter: blur(20px); Start with blur */
-            /* opacity: 1; Fully visible initially */
-            /* animation: blurToClear 3s forwards; Run animation  */
             animation: disappear 2s infinite alternate linear;
         }
-        /* @keyframes blurToClear {
+        @keyframes disappear {
             0% {
-                filter: blur(20px);
                 opacity: 1;
             }
-            100% {
-                filter: blur(0);
-                opacity: 0; 
-            }
-        } */
 
-        @keyframes disappear {
-    0%{
-        opacity: 1;
-    }
-    50%{
-        opacity: 0.5;
-    }
-    100%{
-        opacity: 0;
-    }
-}
+            50% {
+                opacity: 0.5;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
     </style>
 </head>
+
 <body>
     <!-- <img src="images\Picsart_24-09-05_20-36-35-712.jpg" /> -->
-    <img src="images\common_logo-2.png" alt="Logo"/>
+    <img src="images\common_logo-2.png" alt="Logo" />
 
     <script>
         // Redirect to the next page after 3 seconds
@@ -60,4 +50,5 @@
         }, 2000);
     </script>
 </body>
+
 </html>

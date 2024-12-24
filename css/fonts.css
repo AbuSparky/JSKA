@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 400; /* Normal */
+    font-style: normal; /* Regular style */
+}
+p {
+    line-height: 1.5; /* Adjusts space between lines */
+}

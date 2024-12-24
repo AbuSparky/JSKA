@@ -42,11 +42,21 @@
   
   .dropdown-menu a {
     font-size: 22px;
+    cursor: pointer; /* Change cursor to pointer on hover */
+    
   }
   
-  .contact{
-    display: none;
-  }
+
+  /* Dropdown menu width as auto */
+.dropdown-menu {
+  width: auto; 
+}
+
+/* Hover effect for dropdown items */
+.dropdown-menu a:hover {
+  color: red; /* Change text color to red */
+  
+}
 
 /* Image Container Styles */
 .image-wrapper {

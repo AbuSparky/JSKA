@@ -4,147 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="./css/index.css" />
-    <link rel="stylesheet" href="./css/footer.css" />
-    <!-- Bootstrap CSS -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-        integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
+    <title>Welcome</title>
+    <!-- Add the favicon -->
+    <link rel="icon" type="image/png" href="images/Picsart_24-09-05_20-36-35-712.jpg">
 
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        img {
+            width: 100px;
+            height: 450px;
+            animation: disappear 2s infinite alternate linear;
+        }
+        @keyframes disappear {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <header>
-        <div class="container-fluid">
-            <div class="row align-items-center imgsoc">
-                <div class="col-md-4">
-                    <div class="socialmedia d-flex justify-content-center">
-                        <ul class="d-flex">
-                            <li><a href="#" class="fa fa-facebook"></a></li>
-                            <li><a href="#" class="fa fa-twitter"></a></li>
-                            <li><a href="#" class="fa fa-linkedin"></a></li>
-                            <li><a href="#" class="fa fa-instagram"></a></li>
-                            <li><a href="#"><i class="bi bi-youtube"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-4 text-center">
-                    <img src="images/Picsart_24-09-05_20-36-35-712.jpg" alt="image" class="img-fluid">
-                </div>
-                <div class="col-md-4">
-                    <div class="contact text-center">
-                        <h3><b>Sensei :</b> Pakkir Raffani</br>
-                            <b>Contact No:</b> 9669338</br>
-                            <b>Address:</b> Zam Zam Villa, January Maghu, Henveru, Maldives
-                        </h3>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- <img src="images\Picsart_24-09-05_20-36-35-712.jpg" /> -->
+    <img src="images\common_logo-2.png" alt="Logo" />
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav w-100 justify-content-evenly">
-                        <li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./Jskaevent.html">Events</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button"
-                                data-bs-toggle="dropdown">About</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="./jskahistory.html">JSKA History</a></li>
-                                <li><a class="dropdown-item" href="./Jskamaldives.html">JSKA Maldives</a></li>
-                                <li><a class="dropdown-item" href="./Jskaacheivement.html">Achievements</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button"
-                                data-bs-toggle="dropdown">Directory</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="./JskaMember.html">Members</a></li>
-                                <li><a class="dropdown-item" href="./Jskablackbelt.html">Black belts</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button"
-                                data-bs-toggle="dropdown">Application</a>
-                            <ul class="dropdown-menu">
-                                <!-- <li><a class="dropdown-item" href="pdf\Booklet.pdf">BookLet</a></li> -->
-                                <li><a class="dropdown-item" href="pdf\JSKA Application Form.pdf">Application Form</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <div class="imagtext">
-            <img src="images/hero.jpg" alt="main image">
-            <div class="bottom-left">
-                <h1>JAPAN SHOTOKAN KARATE ASSOCIATION MALDIVES</h1>
-                <h2>Associate with</h2>
-                <h2><span style="color: black;">MALDIVES KARATE ASSOCIATION</span></h2>
-                <h3>"Work until your mind forgets and your body remembers."</h3>
-            </div>
-        </div>
-        <div class="row mt-4" id="flexContainer">
-            <div class="col-md-6 poster" id="imageContainer">
-                <!-- <img src="images\Picsart_24-06-01_23-52-00-955 (1).jpg" alt="poster"> -->
-            </div>
-            <div class="col-md-6 text">
-                <p>Welcome to “Japan Shotokan Karate Association of Maldives”, JSKA is an International organization
-                    training
-                    Self Defense through Shotokan Karate, now entering Seventh year at Ghiyasuddin International School.
-                    Students are grading by international affiliated diploma Certificates. Learning “Shotokan” karate is
-                    lots of fun.Four Years in
-                    Finland International School and Kangaroo Kids School Students are Learn how to defend yourself and
-                    your loved ones, karate helps to increase fitness levels, confidence and self-esteem. We will be
-                    teaching kids self-defense techniques through Shotokan karate along with working on your kid’s
-                    fitness level which includes building their strength, flexibility and stamina.
-                    JSKA develops and improves mental toughness and resilience and helps to improve aerobics and
-                    anaerobic conditioning.</br>
-                    We are having branches in 10 Countries (please refer the link) <a href="http://www.jskaindia.com/"
-                        target="_blank"> http://www.jskaindia.com/ </a>, <a
-                        href="http://iaku-karate.org/index.php/organization/"
-                        target="_blank">http://iaku-karate.org/index.php/organization/</a> Its running Successfully with
-                    three instructors, It is also challenging. Learning and enjoying karate works best when everyone
-                    agrees to Kihon (basic karate manners),
-                    Kata Team Kata (Fighting Sequences with two and more peoples), kumite (Sparring and Self Defense).
-                    Weekly 3 hours as per choice of kid’s availability all week days from 13.45 to 14.45 hrs. or 17.45
-                    to 1900 hrs., Students are given time for their magrib prayer in school Mosque. Monthly fee is MVR
-                    500/-. We are conducting Yearly 3 colour Belt Grading (3 Test / 3 Retest). I request that parents
-                    and children discuss this together. Thank you, please
-                    Read  more info...<a href="pdf/JSKA Application Form.pdf" target="_blank">Application Form</a></h4>
-                </p>
-                
-            </div>
-        </div>
-    </main>
-
-    <footer class="text-center py-3">
-        <h7>Copyright &copy; 2024 Maldives Karate Association - All Rights Reserved.</h7>
-        <div class="mail">
-            <li><a href="mailto:raffaniakc@gmail.com"><i class="fa fa-envelope"></i> raffaniakc@gmail.com</a></li>
-            <li><a href="mailto:mohamedthajudeen65@gmail.com"><i class="fa fa-envelope"></i>
-                    mohamedthajudeen65@gmail.com</a></li>
-            <li><a href="mailto:jskamaldives65@gmail.com"><i class="fa fa-envelope"></i> jskamaldives65@gmail.com</a>
-            </li>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script type="module" src="./js/index.js"></script>
+    <script>
+        // Redirect to the next page after 3 seconds
+        setTimeout(() => {
+            window.location.href = "./jskahome.html"; // Replace with the URL of your next page
+        }, 2000);
+    </script>
 </body>
 
 </html>

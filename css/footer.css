@@ -30,6 +30,12 @@ footer {
     display: inline-flex;
     padding: 5px 7px; /* Add padding for better clickability */
     transition: color 0.3s ease; /* Smooth color transition */
+   
+  }
+
+  .mail > li > a > i {
+    margin: 4px;
+
   }
   
   @media (max-width: 420px) {

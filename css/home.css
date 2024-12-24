@@ -44,7 +44,7 @@ body {
   font-size: 22px;
 }
 
-.imagtext {
+/* .imagtext {
   position: relative;
   width: 100%;
 }
@@ -61,12 +61,13 @@ body {
   left: 20px;
   color: white;
   font-size: 16px;
-}
+} */
 
 /* Flexbox Layout for the row */
 #flexContainer {
   display: flex; /* Enable Flexbox */
   /* background-color: aqua; */
+  margin-left: 2px;
   
 }
 
@@ -82,6 +83,37 @@ body {
   line-height: 1.6; /* Improve line spacing */
 }
 
+.carousel-item {
+  position: relative;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 18px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: adds a shadow to the text for better visibility */
+}
+
+
+.carousel-caption h2 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+/* Optional: Add some responsiveness */
+@media (max-width: 768px) {
+  .carousel-caption h1 {
+      font-size: 2rem;
+  }
+  .carousel-caption h2 {
+      font-size: 1.5rem;
+  }
+  .carousel-caption h3 {
+      font-size: 1.2rem;
+  }
+}
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
   #flexContainer .col-md-6 {

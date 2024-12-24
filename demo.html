@@ -52,28 +52,12 @@
     </style>
 </head>
 <body>
+    
+
     <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="images/hero.jpg" class="d-block w-100" alt="main image">
-                <div class="carousel-caption d-none d-md-block bottom-left">
-                    <h1>JAPAN SHOTOKAN KARATE ASSOCIATION MALDIVES</h1>
-                    <h2>Associate with</h2>
-                    <h2><span style="color: black;">MALDIVES KARATE ASSOCIATION</span></h2>
-                    <h3>"Work until your mind forgets and your body remembers."</h3>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="images/hero.jpg" class="d-block w-100" alt="main image">
-                <div class="carousel-caption d-none d-md-block bottom-left">
-                    <h1>SHOTOKAN KARATE ASSOCIATION MALDIVES</h1>
-                    <h2>Associate with</h2>
-                    <h2><span style="color: black;">MALDIVES KARATE ASSOCIATION</span></h2>
-                    <h3>"Work until your mind forgets and your body remembers."</h3>
-                </div>
-            </div>
+            <!-- Items will be dynamically added here -->
         </div>
-        <!-- Corrected Previous and Next buttons -->
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
@@ -83,7 +67,25 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
+    
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="./js/demo.js"></script>
+
+    
+    <!-- <script>
+        // Disable right-click
+document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+});
+
+// Disable specific key combinations
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+        e.preventDefault();
+    }
+});
+    </script> -->
 </body>
 </html>

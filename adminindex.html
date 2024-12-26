@@ -3,45 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin page</title>
+  <title>Admin Page</title>
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    #adminContent {
+      display: none; /* Hide admin content initially */
+    }
     button {
-      display: inline-flex;
+      margin: 5px 0;
+      padding: 10px 20px;
+      cursor: pointer;
     }
   </style>
 </head>
-
 <body>
-  <h1>Upload Image to Firebase</h1>
-  <input type="file" id="imageInput" accept="image/*"></br>
-  <input type="text" id="textInput" placeholder="Enter text for image"/></br>
-  <button id="uploadButton">Events Upload</button>
-  <button id="achievementUploadButton">Achievements Upload</button>
-  <button id="memberUploadButton">Member Upload</button>
-  <button id="blackbeltUploadButton">blackbelts Upload</button>
-  <button id="posterUploadButton">poster Upload</button>
-  <button id="slideUploadButton">Slide Upload</button>
+  <!-- Password Input Section -->
+  <div id="passwordPrompt">
+    <h1>Admin Login</h1>
+    <input type="password" id="passwordInput" placeholder="Enter password" />
+    <button id="submitPasswordButton">Submit</button>
+    <p id="errorMessage" style="color: red; display: none;">Invalid password. Please try again.</p>
+  </div>
 
-  <h2>Events Uploaded Images:</h2>
-  <div id="eventsImageContainer"></div>
+  <!-- Admin Content -->
+  <div id="adminContent">
+    <h1>Upload Image to Firebase</h1>
+    <input type="file" id="imageInput" accept="image/*"><br>
+    <input type="text" id="textInput" placeholder="Enter text for image"/><br>
+    <button id="uploadButton">Events Upload</button>
+    <button id="achievementUploadButton">Achievements Upload</button>
+    <button id="memberUploadButton">Member Upload</button>
+    <button id="blackbeltUploadButton">Blackbelts Upload</button>
+    <button id="posterUploadButton">Poster Upload</button>
+    <button id="slideUploadButton">Slide Upload</button>
 
-  
-  <h2>Achievements Images:</h2>
-  <div id="achievementsImageContainer"></div>
+    <h2>Events Uploaded Images:</h2>
+    <div id="eventsImageContainer"></div>
 
-  <h2>Members Images:</h2>
-  <div id="membersImageContainer"></div>
+    <h2>Achievements Images:</h2>
+    <div id="achievementsImageContainer"></div>
 
-  <h2>black belt Images:</h2>
-  <div id="blackbeltsImageContainer"></div>
+    <h2>Members Images:</h2>
+    <div id="membersImageContainer"></div>
 
-  <h2>Poster Images:</h2>
-  <div id="posterImageContainer"></div>
+    <h2>Black Belt Images:</h2>
+    <div id="blackbeltsImageContainer"></div>
 
-  <h2>Slide Images:</h2>
-  <div id="slideImageContainer"></div>
+    <h2>Poster Images:</h2>
+    <div id="posterImageContainer"></div>
 
-  <script type="module" src="./js/admin.js"></script>
+    <h2>Slide Images:</h2>
+    <div id="slideImageContainer"></div>
+  </div>
 
+  <script>
+    const correctPassword = "philipsDOJI65"; 
+
+    document.getElementById("submitPasswordButton").addEventListener("click", () => {
+      const enteredPassword = document.getElementById("passwordInput").value;
+
+      if (enteredPassword === correctPassword) {
+        document.getElementById("passwordPrompt").style.display = "none";
+        document.getElementById("adminContent").style.display = "block";
+
+        const script = document.createElement('script');
+        script.type = 'module';
+        script.src = './js/admin.js';
+        document.body.appendChild(script);
+      } else {
+        document.getElementById("errorMessage").style.display = "block";
+      }
+    });
+  </script>
 </body>
 </html>

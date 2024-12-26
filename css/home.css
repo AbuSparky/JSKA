@@ -71,7 +71,7 @@ body {
   
 }
 
-#flexContainer .col-md-6 {
+#flexContainer .col-md-4 {
   flex: 1 1 ; /* Flex items will take up 45% of the available width */
   margin: 10px; /* Add some space between items */
   /* background-color: beige; */

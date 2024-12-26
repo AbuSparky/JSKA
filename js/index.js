@@ -22,7 +22,7 @@ function displayImages() {
                 const imgElement = document.createElement('img');
                 imgElement.src = imageData.url;
                 imgElement.alt = imageData.name || 'Event Image';
-                imgElement.style.width = '400px'; 
+                imgElement.style.width = '350px'; 
                 imgElement.classList.add('event-image');
 
                 const textElement = document.createElement('p');

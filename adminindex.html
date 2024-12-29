@@ -4,77 +4,70 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Page</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-    }
-    #adminContent {
-      display: none; /* Hide admin content initially */
-    }
-    button {
-      margin: 5px 0;
-      padding: 10px 20px;
-      cursor: pointer;
-    }
-  </style>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-light">
   <!-- Password Input Section -->
-  <div id="passwordPrompt">
-    <h1>Admin Login</h1>
-    <input type="password" id="passwordInput" placeholder="Enter password" />
-    <button id="submitPasswordButton">Submit</button>
-    <p id="errorMessage" style="color: red; display: none;">Invalid password. Please try again.</p>
+  <div class="container d-flex justify-content-center align-items-center min-vh-100" id="passwordPrompt" >
+    <div class="card shadow p-4 w-100" style="max-width: 400px;">
+      <h1 class="text-center mb-4">Admin Login</h1>
+      <div class="mb-3">
+        <input type="password" id="passwordInput" class="form-control" placeholder="Enter password" />
+      </div>
+      <button id="submitPasswordButton" class="btn btn-primary w-100 mb-3">Submit</button>
+      <p id="errorMessage" class="text-danger text-center d-none">Invalid password. Please try again.</p>
+    </div>
   </div>
-
   <!-- Admin Content -->
-  <div id="adminContent">
-    <h1>Upload Image to Firebase</h1>
-    <input type="file" id="imageInput" accept="image/*"><br>
-    <input type="text" id="textInput" placeholder="Enter text for image"/><br>
-    <button id="uploadButton">Events Upload</button>
-    <button id="achievementUploadButton">Achievements Upload</button>
-    <button id="memberUploadButton">Member Upload</button>
-    <button id="blackbeltUploadButton">Blackbelts Upload</button>
-    <button id="posterUploadButton">Poster Upload</button>
-    <button id="slideUploadButton">Slide Upload</button>
-
-    <h2>Events Uploaded Images:</h2>
-    <div id="eventsImageContainer"></div>
-
-    <h2>Achievements Images:</h2>
-    <div id="achievementsImageContainer"></div>
-
-    <h2>Members Images:</h2>
-    <div id="membersImageContainer"></div>
-
-    <h2>Black Belt Images:</h2>
-    <div id="blackbeltsImageContainer"></div>
-
-    <h2>Poster Images:</h2>
-    <div id="posterImageContainer"></div>
-
-    <h2>Slide Images:</h2>
-    <div id="slideImageContainer"></div>
+  <div id="adminContent" class="container d-none">
+    <div class="card shadow p-4">
+      <h1 class="text-center mb-4">Admin Dashboard</h1>
+      <div class="mb-3">
+        <input type="file" id="imageInput" class="form-control" accept="image/*">
+      </div>
+      <div class="mb-3">
+        <input type="text" id="textInput" class="form-control" placeholder="Enter text for image">
+      </div>
+      <div class="d-flex flex-wrap gap-2">
+        <button id="uploadButton" class="btn btn-primary flex-fill">Events Upload</button>
+        <button id="achievementUploadButton" class="btn btn-secondary flex-fill">Achievements Upload</button>
+        <button id="memberUploadButton" class="btn btn-success flex-fill">Member Upload</button>
+        <button id="blackbeltUploadButton" class="btn btn-warning flex-fill">Blackbelts Upload</button>
+        <button id="posterUploadButton" class="btn btn-info flex-fill">Poster Upload</button>
+        <button id="slideUploadButton" class="btn btn-dark flex-fill">Slide Upload</button>
+      </div>
+      <div class="mt-4">
+        <h2 class="border-bottom pb-2">Events Uploaded Images</h2>
+        <div id="eventsImageContainer" class="row row-cols-2 row-cols-md-4 g-3"></div>
+        <h2 class="border-bottom pb-2 mt-4">Achievements Images</h2>
+        <div id="achievementsImageContainer" class="row row-cols-2 row-cols-md-4 g-3"></div>
+        <h2 class="border-bottom pb-2 mt-4">Members Images</h2>
+        <div id="membersImageContainer" class="row row-cols-2 row-cols-md-4 g-3"></div>
+        <h2 class="border-bottom pb-2 mt-4">Black Belt Images</h2>
+        <div id="blackbeltsImageContainer" class="row row-cols-2 row-cols-md-4 g-3"></div>
+        <h2 class="border-bottom pb-2 mt-4">Poster Images</h2>
+        <div id="posterImageContainer" class="row row-cols-2 row-cols-md-4 g-3"></div>
+        <h2 class="border-bottom pb-2 mt-4">Slide Images</h2>
+        <div id="slideImageContainer" class="row row-cols-2 row-cols-md-4 g-3"></div>
+      </div>
+    </div>
   </div>
-
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    const correctPassword = "philipsDOJI65"; 
-
+    const correctPassword = "philipsDOJI65";
     document.getElementById("submitPasswordButton").addEventListener("click", () => {
       const enteredPassword = document.getElementById("passwordInput").value;
-
       if (enteredPassword === correctPassword) {
-        document.getElementById("passwordPrompt").style.display = "none";
-        document.getElementById("adminContent").style.display = "block";
-
+        document.getElementById("passwordPrompt").classList.add("d-none");
+        document.getElementById("adminContent").classList.remove("d-none");
         const script = document.createElement('script');
         script.type = 'module';
         script.src = './js/admin.js';
         document.body.appendChild(script);
       } else {
-        document.getElementById("errorMessage").style.display = "block";
+        document.getElementById("errorMessage").classList.remove("d-none");
       }
     });
   </script>

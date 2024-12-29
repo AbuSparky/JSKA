@@ -61,32 +61,53 @@ function uploadImage(folderName, container) {
   }
 
   const storageRef = ref(storage, `${folderName}/${file.name}`);
-  const uploadTask = uploadBytesResumable(storageRef, file);
+  const imagesRef = dbRef(database, folderName);
 
-  uploadTask.on(
-    "state_changed",
-    (snapshot) => {
-      const percentage =
-        (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-      console.log(`Upload is ${percentage}% done`);
-    },
-    (error) => console.error("Upload failed:", error),
-    () => {
-      getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-        const imageUrlRef = push(dbRef(database, folderName));
-        set(imageUrlRef, {
-          name: file.name,
-          url: downloadURL,
-          text: imageText,
-          key: imageUrlRef.key,
-        });
+  // Check if the filename already exists in the database
+  onValue(imagesRef, (snapshot) => {
+    let fileExists = false;
 
-        alert("Image uploaded successfully!");
-        displayImages(folderName, container);
-      });
+    snapshot.forEach((childSnapshot) => {
+      const imageData = childSnapshot.val();
+      if (imageData.name === file.name) {
+        fileExists = true;
+      }
+    });
+
+    if (fileExists) {
+      alert("A file with this name already exists. Please rename the file or upload a different one.");
+      return;
     }
-  );
+
+    // Proceed with the upload if the file does not exist
+    const uploadTask = uploadBytesResumable(storageRef, file);
+
+    uploadTask.on(
+      "state_changed",
+      (snapshot) => {
+        const percentage =
+          (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        // console.log(`Upload is ${percentage}% done`);
+      },
+      (error) => console.error("Upload failed:", error),
+      () => {
+        getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+          const imageUrlRef = push(dbRef(database, folderName));
+          set(imageUrlRef, {
+            name: file.name,
+            url: downloadURL,
+            text: imageText,
+            key: imageUrlRef.key,
+          });
+
+          alert("Image uploaded successfully!");
+          displayImages(folderName, container);
+        });
+      }
+    );
+  }, { onlyOnce: true }); // Use { onlyOnce: true } to avoid listening continuously
 }
+
 
 // Display Images and Add Delete Button
 function displayImages(folderName, container) {

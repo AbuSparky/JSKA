@@ -9,3 +9,7 @@ document.addEventListener('keydown', function (e) {
         e.preventDefault();
     }
 });
+
+// footer year
+
+document.getElementById("currentYear").textContent = new Date().getFullYear();

@@ -10,6 +10,7 @@ footer {
     justify-content: center; /* Center items vertically */
     padding: 20px;
     box-sizing: border-box;
+    font-family:  Georgia, Times, 'Times New Roman', serif;
   }
   
   .mail {

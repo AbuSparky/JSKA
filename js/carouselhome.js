@@ -36,7 +36,7 @@ function displayImages() {
 
                 // Add the text element
                 const textElement = document.createElement('h2');
-                textElement.textContent = imageData.text || 'Default Text'; // Fallback text
+                textElement.textContent = imageData.text || ''; // Fallback text
                 textElement.classList.add('image-description');
 
                 // Append the text element to the caption div

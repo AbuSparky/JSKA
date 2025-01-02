@@ -26,7 +26,7 @@ function displayImages() {
                 imgElement.classList.add('event-image');
 
                 const textElement = document.createElement('p');
-                textElement.textContent = imageData.text || '';
+                textElement.textContent = imageData.text || '';  
                 textElement.classList.add('image-description');
 
                 imageWrapper.appendChild(imgElement);

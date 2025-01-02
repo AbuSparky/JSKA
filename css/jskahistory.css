@@ -41,11 +41,18 @@
   
   .navbar-nav .nav-link {
     font-size: 27px;
+    font-family:  Georgia, Times, 'Times New Roman', serif;
   }
   
   .dropdown-menu a {
     font-size: 22px;
   }
+
+  .reduced-height {
+    height: 100px; /* Adjust to your desired height */
+    object-fit: cover; /* Ensures the image maintains its aspect ratio */
+}
+
   
   footer {
     background-color: black;

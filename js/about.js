@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', displayImages);
 function displayImages() {
     imageContainer.innerHTML = ''; 
 
-    const imagesRef = dbRef(database, 'indexpostersfolder'); 
+    const imagesRef = dbRef(database, 'aboutsImagefolder'); 
     onValue(imagesRef, (snapshot) => {
         imageContainer.innerHTML = ''; 
         
@@ -21,8 +21,8 @@ function displayImages() {
 
                 const imgElement = document.createElement('img');
                 imgElement.src = imageData.url;
-                imgElement.alt = imageData.name || 'Images';
-                // imgElement.style.width = '400px'; 
+                imgElement.alt = imageData.name || '';
+                imgElement.style.width = '200px'; 
                 imgElement.classList.add('event-image');
 
                 const textElement = document.createElement('p');
@@ -41,5 +41,6 @@ function displayImages() {
         console.error('Failed to load images from database:', error);
     });
 
-    // loadImagesButton.style.display = 'none'; // Hide the button after loading images
+    
 }
+

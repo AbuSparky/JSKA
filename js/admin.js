@@ -28,6 +28,7 @@ const memberUploadbutton = document.getElementById("memberUploadButton");
 const blackbeltUploadbutton = document.getElementById("blackbeltUploadButton");
 const posterUploadbutton = document.getElementById("posterUploadButton");
 const slideUploadbutton = document.getElementById("slideUploadButton");
+const aboutUploadbutton = document.getElementById("aboutUploadButton");
 
 const fileInput = document.getElementById("imageInput");
 const textInput = document.getElementById("textInput");
@@ -49,7 +50,9 @@ const posterImageContainer = document.getElementById(
 const slideImageContainer = document.getElementById(
   "slideImageContainer"
 );
-
+const aboutImageContainer = document.getElementById(
+  "aboutImageContainer"
+);
 // Generic Upload Image Function
 function uploadImage(folderName, container) {
   const file = fileInput.files[0];
@@ -130,7 +133,7 @@ function displayImages(folderName, container) {
       imgElement.style.display = "block";
 
       const textElement = document.createElement("p");
-      textElement.textContent = imageData.text || "No description provided";
+      textElement.textContent = imageData.text || "";
       textElement.style.textAlign = "center";
       textElement.style.fontWeight = "bold";
 
@@ -197,6 +200,9 @@ posterUploadbutton.addEventListener("click",()=>{
 slideUploadbutton.addEventListener("click",()=>{
   uploadImage("slidepostersfolder",slideImageContainer)
 })
+aboutUploadbutton.addEventListener("click",()=>{
+  uploadImage("aboutsImagefolder",aboutImageContainer)
+})
 
 // Call displayImages on page load
 displayImages("eventsfolder", eventsImageContainer);
@@ -205,3 +211,4 @@ displayImages("membersfolder", membersImageContainer);
 displayImages("blackbeltsfolder", blackbeltsImageContainer);
 displayImages("indexpostersfolder",posterImageContainer);
 displayImages("slidepostersfolder",slideImageContainer);
+displayImages("aboutsImagefolder",aboutImageContainer);

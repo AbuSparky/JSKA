@@ -38,6 +38,7 @@
   
   .navbar-nav .nav-link {
     font-size: 27px;
+    font-family:  Georgia, Times, 'Times New Roman', serif;
   }
   
   .dropdown-menu a {
@@ -72,20 +73,22 @@
 }
 
 
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    margin: 20px;
-    cursor: pointer;
+
+p {
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 18px;
+}
+h2 {
+  font-family: Georgia, Times, "Times New Roman", serif;
 }
 
 /* Image Container Styles */
 #imageContainer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 20px;
+    /* justify-content: space-between; */
+    gap: 10px;
+    padding: 10px;
 }
 
 .event-image {
@@ -130,14 +133,22 @@ button {
 
   .image-description {
     
-    margin: 10px auto; /* Center the description horizontally */
-    text-align: center; /* Align the text to the center */
-    white-space: nowrap; /* Prevent text wrapping */
+    width: 350px;
+    height:auto;
+    margin: 10px auto;
     font-size: 16px; /* Adjust font size if needed */
     color: #333; /* Optional text color */
     display: block; /* Ensure it behaves as a block element */
-    max-width: 80%; /* Optional: Limit the width for better layout */
-
+    text-align: center; /* Align the text to the center */
   }
   
 }
+
+
+
+
+    
+    
+    
+    
+    

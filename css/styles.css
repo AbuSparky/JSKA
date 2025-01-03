@@ -1,109 +1,107 @@
 * {
-    margin: 0;
-    padding: 0;
-    border: 0;
-  }
-  
-  body {
-    overflow-x: hidden;
-  }
-  
-  .imgsoc {
-    height: 300px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .socialmedia ul {
-    list-style-type: none;
-    display: flex;
-    gap: 30px;
-    font-size: 30px;
-  }
-  
-  .socialmedia ul li a {
-    text-decoration: none;
-    color: rgb(2, 4, 4);
-  }
-  
-  .imgsoc img {
-    width: 100%;
-    max-width: 250px;
-    height: auto;
-  }
-  
-  .contact h3 {
-    font-size: 20px;
-  }
-  
-  .navbar-nav .nav-link {
-    font-size: 27px;
-    font-family:  Georgia, Times, 'Times New Roman', serif;
-  }
-  
-  .dropdown-menu a {
-    font-size: 22px;
-    cursor: pointer; /* Change cursor to pointer on hover */
-    
-  }
-  
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
 
-  /* Dropdown menu width as auto */
+body {
+  overflow-x: hidden;
+  font-family: "Garamond,Playfair Display,Futura";
+}
+
+.imgsoc {
+  height: 300px;
+  display: flex;
+  align-items: center;
+}
+
+.socialmedia ul {
+  list-style-type: none;
+  display: flex;
+  gap: 30px;
+  font-size: 30px;
+}
+
+.socialmedia ul li a {
+  text-decoration: none;
+  color: rgb(2, 4, 4);
+}
+
+.imgsoc img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+}
+
+.contact h3 {
+  font-size: 20px;
+}
+
+.navbar-nav .nav-link {
+  font-size: 27px;
+  font-family: "Garamond,Playfair Display,Futura";
+}
+
+.dropdown-menu a {
+  font-size: 22px;
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Dropdown menu width as auto */
 .dropdown-menu {
-  width: auto; 
+  width: auto;
 }
 
 /* Hover effect for dropdown items */
 .dropdown-menu a:hover {
   color: red; /* Change text color to red */
-  
 }
 
 /* Image Container Styles */
 .image-wrapper {
-    width: calc(33.33% - 20px); /* 3 images per row */
-    margin: 15px 0; /* Top and bottom margin for images */
-    text-align: center;
+  width: calc(33.33% - 20px); /* 3 images per row */
+  margin: 15px 0; /* Top and bottom margin for images */
+  text-align: center;
 }
 .image-description {
-    font-size: 18px;
-    color: #333;
-    font-weight: bold;
-    margin-top: 10px;
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+  margin-top: 10px;
 }
-
-
-
+li{
+  font-family: "Garamond,Playfair Display,Futura";
+}
 p {
-  font-family: Georgia, Times, "Times New Roman", serif;
+  font-family:'Garamond,Playfair Display,Futura';
   font-size: 18px;
 }
-h2 {
-  font-family: Georgia, Times, "Times New Roman", serif;
+h3 {
+  margin: 10px;
+  font-family:'Garamond,Playfair Display,Futura';
 }
 
 /* Image Container Styles */
 #imageContainer {
-    display: flex;
-    flex-wrap: wrap;
-    /* justify-content: space-between; */
-    gap: 10px;
-    padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  gap: 10px;
+  padding: 10px;
 }
 
 .event-image {
-    width: calc(25% - 20px);
-    height: auto;
-    border: 2px solid black;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+  width: calc(25% - 20px);
+  height: auto;
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
 .event-image:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
-
 
 @media (max-width: 420px) {
   /* Image Container Styles */
@@ -132,23 +130,12 @@ h2 {
   }
 
   .image-description {
-    
     width: 350px;
-    height:auto;
+    height: auto;
     margin: 10px auto;
     font-size: 16px; /* Adjust font size if needed */
     color: #333; /* Optional text color */
     display: block; /* Ensure it behaves as a block element */
     text-align: center; /* Align the text to the center */
   }
-  
 }
-
-
-
-
-    
-    
-    
-    
-    

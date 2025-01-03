@@ -6,6 +6,7 @@
 
 body {
   overflow-x: hidden;
+  font-family: "Garamond,Playfair Display,Futura";
 }
 
 .imgsoc {
@@ -38,7 +39,7 @@ body {
 
 .navbar-nav .nav-link {
   font-size: 27px;
-  font-family: Georgia, Times, "Times New Roman", serif;
+  font-family: "Garamond,Playfair Display,Futura";
 }
 
 .dropdown-menu a {
@@ -65,24 +66,29 @@ body {
 .image-description {
   font-size: 15px;
   font-weight: bold;
-  margin-top: 10px;
+  margin-left: 60px;
 }
-
+li{
+  font-family: "Garamond,Playfair Display,Futura";
+}
 p {
-  font-family: Georgia, Times, "Times New Roman", serif;
-  font-size: 18px;
+  font-size: 20px;
+  font-family: "Garamond,Playfair Display,Futura";
+}
+h3 {
+  margin: 10px;
+  font-family: "Garamond,Playfair Display,Futura";
 }
 h2 {
-  font-family: Georgia, Times, "Times New Roman", serif;
+  font-family: "Garamond,Playfair Display,Futura";
 }
 
 /* Image Container Styles */
 #imageContainer {
-  display: flex;
+  display: block;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 5px;
-  padding: 5px;
 }
 
 .event-image {

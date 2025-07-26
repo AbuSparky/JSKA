@@ -76,8 +76,8 @@ p {
   font-family:'Garamond,Playfair Display,Futura';
   font-size: 18px;
 }
-h3 {
-  margin: 10px;
+h6 {
+  text-align: justify;
   font-family:'Garamond,Playfair Display,Futura';
 }
 

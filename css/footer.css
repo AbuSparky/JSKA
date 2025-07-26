@@ -8,7 +8,7 @@ footer {
     flex-direction: column; /* Stack items vertically for smaller screens */
     align-items: center; /* Center items horizontally */
     justify-content: center; /* Center items vertically */
-    padding: 20px;
+    padding: 10px;
     box-sizing: border-box;
     font-family:  Georgia, Times, 'Times New Roman', serif;
   }
@@ -17,7 +17,7 @@ footer {
     display: flex; /* Enable flexbox for the list */
     flex-wrap: wrap; /* Allow items to wrap for responsiveness */
     justify-content: center; /* Center items horizontally */
-    gap: 7px; /* Add space between items */
+    gap: 5px; /* Add space between items */
     
   }
   
@@ -29,7 +29,7 @@ footer {
     text-decoration: none;
     color: white;
     display: inline-flex;
-    padding: 5px 7px; /* Add padding for better clickability */
+    padding: 5px 5px; /* Add padding for better clickability */
     transition: color 0.3s ease; /* Smooth color transition */
    
   }

@@ -1,7 +1,6 @@
 import { database } from './firebase.config.js';
 import { ref as dbRef, onValue } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-database.js";
 
-// const loadImagesButton = document.getElementById('loadImagesButton');
 const imageContainer = document.getElementById('imageContainer');
 
 window.addEventListener('DOMContentLoaded', displayImages);
@@ -41,5 +40,4 @@ function displayImages() {
         console.error('Failed to load images from database:', error);
     });
 
-    loadImagesButton.style.display = 'none'; // Hide the button after loading images
 }
